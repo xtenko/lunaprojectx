@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>lunaprojectx</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="card" class="card">
+      <h1 class="brand">lunaprojectx</h1>
+
+      <div id="auth-section">
+        <form id="login-form" class="form">
+          <h2>Login</h2>
+          <input id="email" type="email" placeholder="Email" required />
+          <input id="password" type="password" placeholder="Password" required />
+          <button id="btn-login" class="btn">Login</button>
+          <p class="muted">Belum punya akun? <a id="to-register" href="#">Register</a></p>
+          <p id="auth-msg" class="msg"></p>
+        </form>
+
+        <form id="register-form" class="form hidden">
+          <h2>Register</h2>
+          <input id="r-email" type="email" placeholder="Email" required />
+          <input id="r-password" type="password" placeholder="Password" required />
+          <button id="btn-register" class="btn">Register</button>
+          <p class="muted">Sudah punya akun? <a id="to-login" href="#">Login</a></p>
+          <p id="reg-msg" class="msg"></p>
+        </form>
+      </div>
+
+      <div id="dashboard" class="hidden">
+        <div class="topbar">
+          <div>
+            <p class="text-sm text-slate-600">Logged in as</p>
+            <p id="user-email" class="user-email"></p>
+          </div>
+          <div>
+            <button id="btn-logout" class="btn danger">Logout</button>
+          </div>
+        </div>
+
+        <div class="upload-area">
+          <input id="file-input" type="file" />
+          <button id="btn-upload" class="btn success">Upload</button>
+          <p id="upload-msg" class="msg"></p>
+        </div>
+
+        <h3>File kamu</h3>
+        <div id="files-list" class="files-list">
+          <p class="muted">Memuat...</p>
+        </div>
+      </div>
+
+      <footer class="foot muted">Data disimpan online di Supabase Storage (bucket: <code>uploads</code>)</footer>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
